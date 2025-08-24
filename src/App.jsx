@@ -1,10 +1,11 @@
-import React from 'react'
 import Movies from './MovieZone/Movies'
+import UseEffect from './components/UseEffect'
 const App = () => {
 
   return (
    <>
-   <Movies />
+   {/* <Movies /> */}
+   <UseEffect />
    </>
   )
 }
