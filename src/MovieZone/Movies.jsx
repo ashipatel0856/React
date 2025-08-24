@@ -3,22 +3,26 @@ import {movies} from './data.js'
 
 const Movies = () => {
     
-    const [movieList,setMovieList] = useState(movies)
+    const [movieList,setMovieList] = useState(movies);
+
+    const filterByCategory =(cat) => {
+        setMovieList(movies.filter((data)=>data.category==cat))
+    }
+
   return (
     
     <>
-    <div className="my-3 bg-dark" style={{width:'1000px',margin:'auto'}}>
-<button type="button" className="btn btn-outline-primary mx-3">Primary</button>
-<button type="button" className="btn btn-outline-secondary mx-3">Secondary</button>
-<button type="button" className="btn btn-outline-success mx-3">Success</button>
-<button type="button" className="btn btn-outline-danger mx-3">Danger</button>
-<button type="button" className="btn btn-outline-warning mx-3">Warning</button>
-<button type="button" className="btn btn-outline-info mx-3">Info</button>
-<button type="button" className="btn btn-outline-light mx-3">Light</button>
-<button type="button" className="btn btn-outline-dark mx-3">Dark</button>
+<div className="my-3 " style={{width:'1000px',margin:'auto'}}>
+    <div className='mx-auto text-center'>
+<button onClick={()=>setMovieList(movies)}  type="button" className="btn btn-outline-primary mx-3">All</button>
+<button onClick={()=>filterByCategory("Action")}  type="button" className="btn btn-outline-secondary mx-3">Action</button>
+<button onClick={()=>filterByCategory("Thriller")} type="button" className="btn btn-outline-success mx-3">Thriller</button>
+<button onClick={()=>filterByCategory("Animation")} type="button" className="btn btn-outline-danger mx-3">Animation</button>
+<button onClick={()=>filterByCategory("Horror")} type="button" className="btn btn-outline-warning mx-3">Horror</button>
+<button onClick={()=>filterByCategory("Drama")}  type="button" className="btn btn-outline-info mx-3">Drama</button>
+<button onClick={()=>filterByCategory("Sci-Fi")} type="button" className="btn btn-outline-light mx-3">Sci-Fi</button>
     </div>
-    
-
+</div>
 
     <div 
     style= {{display:'flex',
