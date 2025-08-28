@@ -18,8 +18,11 @@ import { Navbar } from './components/Navbar'
 import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
 import IndianGov from './Home/IndianGov'
+
 const App = () => {
 
+  const money = 1000;
+  const adharcard = 7087;
   return (
    <>
    {/* <Movies /> */}
@@ -32,7 +35,7 @@ const App = () => {
   <Router>
     < Navbar />
     <Routes>
-        <Route path="/" element={<IndianGov />}/>
+        <Route path="/" element={<IndianGov money ={money} adharcard={adharcard} />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/team" element={<Team />}/>
         <Route path="/contact" element={<Contact />}/>

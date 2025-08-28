@@ -1,10 +1,11 @@
 import React from 'react'
+import StateGov from './StateGov'
 
-const IndianGov = () => {
+const IndianGov = (money) => {
   return (
     <div>
         <h1>this is indian gov component</h1>
-            < StateGov />
+            < StateGov  money ={money} />
     </div>
   )
 }
