@@ -17,6 +17,7 @@ import Course_Detail from './pages/Course_Details'
 import { Navbar } from './components/Navbar'
 import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
+import IndianGov from './Home/IndianGov'
 const App = () => {
 
   return (
@@ -31,7 +32,7 @@ const App = () => {
   <Router>
     < Navbar />
     <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="/" element={<IndianGov />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/team" element={<Team />}/>
         <Route path="/contact" element={<Contact />}/>
