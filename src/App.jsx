@@ -15,7 +15,8 @@ import Team from './pages/Team'
 import Product from './pages/Product'
 import Course_Detail from './pages/Course_Details'
 import { Navbar } from './components/Navbar'
-
+import Dashboard from './pages/Dashboard'
+import Profile from './pages/Profile'
 const App = () => {
 
   return (
@@ -37,7 +38,8 @@ const App = () => {
         <Route path="/meal" element={<Meal />} />
         <Route path="/courses" element={<Product />}/>
        <Route path="/courses/:id" element={<Course_Detail />}/>
-
+       <Route path ="/dashboard" element={<Dashboard />} />
+       <Route path ="profile" element ={<Profile />} />
 
     </Routes>
   </Router>
